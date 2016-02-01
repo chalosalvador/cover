@@ -38,7 +38,7 @@
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Inicio</a></li>
                   <li><a href="#">Sobre mi</a></li>
-                  <li><a href="#">Contáct</a></li>
+                  <li><a href="#">Contác</a></li>
                 </ul>
               </nav>
             </div>
