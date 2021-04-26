@@ -1,0 +1,43 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.app__comments {
+  height: 40px;
+  width: 800px;
+  background-color: beige;
+  padding: 15px;
+}
+
+.app__result {
+  width: 100%;
+}
+
+.app__result > div {
+  background-color: #ffffff;
+}
+
+.app__sections {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.app__sections > div {
+  width: 30%;
+}
+
+/*.app__leftSide,*/
+/*.app__rightSide {*/
+/*  width: 50%;*/
+/*}*/

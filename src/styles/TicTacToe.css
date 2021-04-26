@@ -1,0 +1,40 @@
+.tictactoe {
+  position: relative;
+  height: 500px;
+}
+
+.tictactoe__board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  transition: all 800ms linear;
+  position: absolute;
+  left: 0;
+  /*color: #000000;*/
+}
+
+.tictactoe__board div:nth-child(-n+6) {
+  border-bottom: 1px solid;
+}
+
+.tictactoe__board div:nth-child(3n+2) {
+  border-right: 1px solid;
+  border-left: 1px solid;
+}
+
+.tictactoe__header {
+  transition: all 800ms linear;
+}
+
+.tictactoe__board div {
+  transition: all 800ms linear, color 0ms linear;
+}
+
+.item-O {
+  color: #ffffff;
+}
+
+.item-X {
+  color: #7e268e;
+}
+
