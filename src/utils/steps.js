@@ -53,6 +53,7 @@ const gameState = (
 
 const gameHeader = (
   "      <div className='tictactoe__header'>\n" +
+  // eslint-disable-next-line no-template-curly-in-string
   '        {!winner ? `Turno de ${isCircle ? "O" : "X"}` : `WINNER: ${winner}`}\n' +
   "      </div>\n"
 ).split("");
@@ -350,9 +351,7 @@ const steps = [
     startAtRow: 30,
     startAtCol: 0,
     // intro: "Ahora pongamos un poco de color...".split(""),
-    code: (
-      "  border-color: rgb(62,191,172);\n" + "  border-width: 7px;\n"
-    ).split(""),
+    code: "  border-color: rgb(62,191,172);\n  border-width: 7px;\n".split(""),
     outro: "Los bordes de la cuadrícula...".split(""),
     // outroWaitTime: 2000,
     callback: () => {
@@ -370,6 +369,7 @@ const steps = [
     intro: "¿Qué tal si hacemos que las O y las X sean de diferente color? Eso ayudaría a los usuarios a diferenciar sus elementos. Primero debemos aumentar algo pequeño en nuestro JS...".split(
       ""
     ),
+    // eslint-disable-next-line no-template-curly-in-string
     code: " className={cells[i] && `item-${cells[i]}`}".split(""),
     outro: "Bien, ahora vamos al CSS...".split(""),
     // outroWaitTime: 2000,
