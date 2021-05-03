@@ -14,21 +14,35 @@ const App = () => {
   const cssEditorRef = useRef(null);
   const [currentStep, setCurrentStep] = useState(0);
   const resultRef = useRef(null);
-  const commentsRef = useRef(null);
+  const commentsHTMLRef = useRef(null);
   const [showGame, setShowGame] = useState(false);
   const [allowHandleClick, setAllowHandleClick] = useState(false);
   const [allowVerifyWinner, setAllowVerifyWinner] = useState(false);
   const [applyItemStyle, setApplyItemStyle] = useState(false);
   const [showHeader, setShowHeader] = useState(false);
 
-  const max = 90;
-  const min = 30;
+  const max = 10;
+  const min = 10;
+
+  const checkHTML = function (html) {
+    const doc = document.createElement("div");
+    doc.innerHTML = html;
+    return doc.innerHTML === html;
+  };
 
   const writeOutro = useCallback(() => {
     const step = steps[currentStep];
-    commentsRef.current.innerHTML = "";
+    commentsHTMLRef.current.innerHTML = "";
+    let tmpTextContent = "";
     const interval = setInterval(() => {
-      commentsRef.current.innerHTML += step.outro.shift();
+      const char = step.outro.shift();
+      tmpTextContent += char;
+
+      if (checkHTML(tmpTextContent)) {
+        commentsHTMLRef.current.innerHTML = tmpTextContent;
+      } else {
+        commentsHTMLRef.current.innerHTML += char;
+      }
 
       if (step.outro.length === 0) {
         clearInterval(interval);
@@ -50,6 +64,7 @@ const App = () => {
           }
 
           if (step.showHeader !== undefined) {
+            console.log("SSHOWWW HEADDERERERER", step.showHeader);
             setShowHeader(step.showHeader);
           }
 
@@ -122,9 +137,18 @@ const App = () => {
   const writeIntro = useCallback(() => {
     const step = steps[currentStep];
 
-    commentsRef.current.innerHTML = "";
+    commentsHTMLRef.current.innerHTML = "";
+    let tmpTextContent = "";
+
     const interval = setInterval(() => {
-      commentsRef.current.innerHTML += step.intro.shift();
+      const char = step.intro.shift();
+      tmpTextContent += char;
+      console.log("tmpTextContent", checkHTML(tmpTextContent));
+      if (checkHTML(tmpTextContent)) {
+        commentsHTMLRef.current.innerHTML = tmpTextContent;
+      } else {
+        commentsHTMLRef.current.innerHTML += char;
+      }
 
       if (step.intro.length === 0) {
         clearInterval(interval);
@@ -137,7 +161,9 @@ const App = () => {
 
   useEffect(() => {
     if (jsEditorRef.current && cssEditorRef.current) {
+      console.log("steps[currentStep]", steps[currentStep].intro);
       if (steps[currentStep].intro) {
+        console.log("writeIntro");
         writeIntro();
       } else {
         writeChar();
@@ -156,7 +182,18 @@ const App = () => {
   return (
     <>
       <div className="app">
-        <div className="app__comments" ref={commentsRef} />
+        <div className="app__comments">
+          <div id="html" ref={commentsHTMLRef} />
+          <div className="menta-link">
+            <a
+              href="https://grupomenta.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              grupomenta.com
+            </a>
+          </div>
+        </div>
 
         <div className="app__sections">
           <div className="app__jscode">
@@ -166,12 +203,12 @@ const App = () => {
               theme="monokai"
               onLoad={onLoadJS}
               name="js_editor"
-              editorProps={{ $blockScrolling: true }}
+              // editorProps={{ $blockScrolling: true }}
               wrapEnabled={true}
               readOnly
               value={jsEditorRef.current ? jsEditorRef.current.getValue() : ""}
               width="100%"
-              height="100vh"
+              height="calc(100vh - 106px)"
             />
           </div>
 
@@ -182,14 +219,14 @@ const App = () => {
               theme="monokai"
               onLoad={onLoadCSS}
               name="css_editor"
-              editorProps={{ $blockScrolling: true }}
+              // editorProps={{ $blockScrolling: true }}
               wrapEnabled={true}
               readOnly
               value={
                 cssEditorRef.current ? cssEditorRef.current.getValue() : ""
               }
               width="100%"
-              height="100vh"
+              height="calc(100vh - 106px)"
             />
           </div>
 

@@ -51,6 +51,7 @@ const TicTacToe = ({
 
   return (
     <div className="tictactoe">
+      {showHeader}
       {showHeader && (
         <div className="tictactoe__header">
           {!winner ? `Turno de ${isCircle ? "O" : "X"}` : `WINNER: ${winner}`}
@@ -60,7 +61,7 @@ const TicTacToe = ({
         {cells.map((_, i) => (
           <div
             key={i}
-            className={applyItemStyle && cells[i] && `item-${cells[i]}`}
+            className={applyItemStyle ? cells[i] && `item-${cells[i]}` : null}
             onClick={allowHandleClick ? () => handleClick(i) : null}
           >
             {cells[i]}

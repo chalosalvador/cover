@@ -108,7 +108,7 @@ const onClick = " onClick={() => handleClick(i)}".split("");
 const steps = [
   {
     type: "js",
-    outro: "¡Hola! 👋 Mi nombre es Chalo Salvador y soy desarrollador de aplicaciones web y móviles.".split(
+    outro: `¡Hola! 👋 Mi nombre es <strong>Chalo Salvador</strong> y <strong>desarrollo aplicaciones web y móviles</strong>.`.split(
       ""
     ),
     outroWaitTime: 2000,
@@ -116,7 +116,15 @@ const steps = [
   },
   {
     type: "js",
-    outro: "En mis 12 años de carrera he trabajado tanto en backend como en frontend, pero en los últimos años me he inclinado un poco más por el frontend.".split(
+    outro: "Actualmente, lidero un gran equipo de desarrolladores en <strong>Grupo Menta</strong> 👩‍💻👨‍💻".split(
+      ""
+    ),
+    outroWaitTime: 2000,
+    code: [],
+  },
+  {
+    type: "js",
+    outro: "Me gustaría mostrarte un poco de lo que hacemos. Así que, si estás buscando un <strong>equipo de desarrollo</strong>, sabes que <strong>puedes contar con nosotros</strong> 😉".split(
       ""
     ),
     outroWaitTime: 3000,
@@ -124,7 +132,7 @@ const steps = [
   },
   {
     type: "js",
-    outro: "En este demo me gustaría mostrarte lo que hago para crear aplicaciones web y móviles.".split(
+    outro: "Pero no quiero mostrarte solo el resultado final, <strong>quiero que experimentes el proceso</strong> de desarrollo de una aplicación web y lo emocionante que es 🤩".split(
       ""
     ),
     outroWaitTime: 3000,
@@ -132,15 +140,7 @@ const steps = [
   },
   {
     type: "js",
-    outro: "Pero no solo quiero mostrarte el resultado final, quiero que experimentes el proceso de desarrollo de una aplicación web y lo emocionante que es 🤩".split(
-      ""
-    ),
-    outroWaitTime: 4000,
-    code: [],
-  },
-  {
-    type: "js",
-    outro: "Así que te propongo que me acompañes a crear un TicTacToe.".split(
+    outro: "Así que, te propongo que me acompañes a crear un <strong>3 en raya</strong>.".split(
       ""
     ),
     outroWaitTime: 3000,
@@ -148,11 +148,25 @@ const steps = [
   },
   {
     type: "js",
-    outro: "Antes de empezar quiero asegurate que lo que verás no es una animación, me verás realmente escribir el código en tiempo real 🤓. ¿Estás listo?".split(
+    outro: "Ahora, nos verás <strong>escribir el código en tiempo real</strong> 🤓".split(
       ""
     ),
-    outroWaitTime: 4000,
+    outroWaitTime: 2000,
     code: [],
+  },
+  {
+    type: "js",
+    outro: "¿Empezamos?".split(""),
+    outroWaitTime: 2000,
+    code: [],
+    callback: () => {
+      document.querySelector(".app__comments").style.minHeight = "106px";
+      document.querySelector(".app__sections").style.height =
+        "calc(100vh - 150px)";
+      document.querySelector(".app__comments #html").style.paddingBottom = 0;
+      document.querySelector(".app__comments .menta-link").style.fontSize =
+        "1.3rem";
+    },
   },
   {
     type: "js",
@@ -162,7 +176,7 @@ const steps = [
       ""
     ),
     code: initComponent,
-    outro: "hmmm, nada que parezca muy interesante por ahora 😒 pero debemos empezar por algo 😉 ...".split(
+    outro: "hmm, nada que parezca muy interesante por ahora 😒 pero debemos empezar por algo 😉 ...".split(
       ""
     ),
     outroWaitTime: 3000,
@@ -171,7 +185,7 @@ const steps = [
     type: "js",
     startAtRow: 3,
     startAtCol: 0,
-    intro: "Ahora vamos a empezar a crear algo en la pantalla 😃...".split(""),
+    intro: "Ahora vamos a empezar a crear algo en la pantalla 😃".split(""),
     code: cellsState,
   },
   {
@@ -179,16 +193,14 @@ const steps = [
     startAtRow: 7,
     startAtCol: 0,
     code: createGrid,
-    outro: "Bueno, aunque se ve complicado, lo único que hemos hecho es crear elementos en nuestra aplicación...".split(
-      ""
-    ),
-    outroWaitTime: 3000,
+    outro: "¿Parece complicado? naah para nada...".split(""),
+    outroWaitTime: 2000,
   },
   {
     type: "js",
     startAtRow: 1,
     startAtCol: 0,
-    intro: "Ahora, para que estos elementos se vean en pantalla debemos aplicarle algo de estilo, así que vamos a escribir algo de CSS.".split(
+    intro: "Ahora, para que estos elementos se vean en pantalla debemos aplicarle algo de estilos 💅, así que vamos a escribir algo de CSS.".split(
       ""
     ),
     code: includeCSS,
@@ -198,19 +210,26 @@ const steps = [
     startAtRow: 0,
     startAtCol: 0,
     code: initCSS,
-    outro: "Bien, ahora si, veamos en que se traduce este código en la pantalla...".split(
+    outro: "Bien, ahora si, veamos en qué se traduce este código en la pantalla...".split(
       ""
     ),
-    outroWaitTime: 4000,
+    outroWaitTime: 2000,
     showGame: true,
+  },
+  {
+    type: "js",
+    intro: "¡Genial! ya tenemos la cuadrícula de nuestro 3 en raya 🎉".split(
+      ""
+    ),
+    code: [],
+    outro: "Pero aún no hace nada 😔. Agreguemos la lógica del juego...".split(
+      ""
+    ),
   },
   {
     type: "js",
     startAtRow: 5,
     startAtCol: 0,
-    intro: "Genial, ya tenemos la cuadrícula de nuestro TicTacToe 🎉. Pero aún no hace nada :(. Agreguemos la lógica del juego...".split(
-      ""
-    ),
     code: gameState,
   },
   {
@@ -224,6 +243,9 @@ const steps = [
     startAtRow: 10,
     startAtCol: 0,
     code: gameHeader,
+    outro: "Esa es la cabecera del juego, ahora un poco más de código...".split(
+      ""
+    ),
     showHeader: true,
   },
   {
@@ -237,16 +259,14 @@ const steps = [
     startAtRow: 25,
     startAtCol: 22,
     code: onClick,
-    outro: "Bien, esto nos permite jugar, inténtalo :)".split(""),
+    outro: "Bien, esto nos permite jugar, inténtalo 😉".split(""),
     outroWaitTime: 6000,
     allowHandleClick: true,
   },
   {
     type: "js",
     code: [],
-    outro: "Pero nos nos dice cuando hemos ganado 😕 ... Debemos agregar un poco más de lógica para eso, así que hagámoslo...".split(
-      ""
-    ),
+    outro: "Debemos agregar un poco más de lógica al juego...".split(""),
   },
   {
     type: "js",
@@ -259,7 +279,7 @@ const steps = [
     startAtRow: 18,
     startAtCol: 0,
     code: verifyWinner,
-    outro: "Ahora si tenemos la lógica del juego completa. Adelante, pruébalo!".split(
+    outro: "Ahora sí, tenemos la lógica del juego completa. Adelante, ¡pruébalo!".split(
       ""
     ),
     outroWaitTime: 5000,
@@ -366,12 +386,12 @@ const steps = [
     type: "js",
     startAtRow: 51,
     startAtCol: 22,
-    intro: "¿Qué tal si hacemos que las O y las X sean de diferente color? Eso ayudaría a los usuarios a diferenciar sus elementos. Primero debemos aumentar algo pequeño en nuestro JS...".split(
+    intro: "¿Qué tal si hacemos que las O y las X sean de diferente color?".split(
       ""
     ),
     // eslint-disable-next-line no-template-curly-in-string
     code: " className={cells[i] && `item-${cells[i]}`}".split(""),
-    outro: "Bien, ahora vamos al CSS...".split(""),
+    // outro: "Bien, ahora vamos al CSS...".split(""),
     // outroWaitTime: 2000,
     callback: () => {
       const cells = document.querySelectorAll(".tictactoe__board div");
@@ -402,10 +422,12 @@ const steps = [
   },
   {
     type: "css",
-    startAtRow: 40,
+    startAtRow: 41,
     startAtCol: 0,
-    intro: "Finalmente, acomedemos un poco el header...".split(""),
+    intro: "Finalmente, acomodemos un poco la cabecera...".split(""),
     code: (
+      "\n" +
+      "\n" +
       ".tictactoe__header {\n" +
       "    text-align: center;\n" +
       "    padding: 30px;\n" +
@@ -414,7 +436,7 @@ const steps = [
       "    font-weight: bold;\n" +
       "}"
     ).split(""),
-    outro: "¡Listo! Nuestro 3 en raya está listo 🥳🎉".split(""),
+    outro: "Veamos el resultado...".split(""),
     callback: () => {
       const cells = document.querySelectorAll(".tictactoe__header");
       cells.forEach((cell) => {
@@ -424,6 +446,28 @@ const steps = [
         cell.style.color = "rgb(62, 191, 177)";
         cell.style.fontWeight = "bold";
       });
+    },
+  },
+  {
+    type: "js",
+    code: [],
+    outro: "¡Listo! Nuestro 3 en raya está listo 🥳🎉".split(""),
+    outroWaitTime: 4000,
+  },
+  {
+    type: "js",
+    outro: 'Si te gustó, imagina todo lo que podemos hacer por tí.<br>Contáctanos en <a href="https://grupomenta.com">grupomenta.com</a>, nos encantará conversar contigo 😉'.split(
+      ""
+    ),
+    code: [],
+    callback: () => {
+      document.querySelector(".app__comments").style.minHeight =
+        "calc(100vh - 40px)";
+      document.querySelector(".app__sections").style.height = "0";
+      document.querySelector(".app__comments #html").style.paddingBottom =
+        "30%";
+      document.querySelector(".app__comments .menta-link").style.fontSize =
+        "2.5rem";
     },
   },
 ];

@@ -1,7 +1,7 @@
 body {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: center;
 }
 
@@ -13,11 +13,58 @@ body {
 }
 
 .app__comments {
-  height: 40px;
-  width: 800px;
-  background-color: beige;
-  padding: 15px;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 40px);
+  width: 100%;
+  background-color: #3bbfad;
+  padding: 20px 50px;
+  font-size: 2.5rem;
+  color: white;
+  transition: all 800ms linear;
+  line-height: 1.1;
+  position: relative;
 }
+
+.app__comments:after {
+  background-image: url('../images/logo.png');
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.menta-link {
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  z-index: 2;
+  transition: all 800ms linear;
+}
+
+.menta-link a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.app__comments #html {
+  transition: all 800ms linear;
+  padding-bottom: 30%;
+  z-index: 2;
+}
+.app__comments #html a {
+  color: #ffffff;
+  font-weight: bold;
+}
+
 
 .app__result {
   width: 100%;
@@ -31,10 +78,14 @@ body {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  height: 0;
+  overflow: hidden;
+  transition: all 800ms linear;
 }
 
 .app__sections > div {
   width: 30%;
+  overflow: scroll;
 }
 
 /*.app__leftSide,*/
