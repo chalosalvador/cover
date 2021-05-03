@@ -9,7 +9,11 @@ import "ace-builds/src-noconflict/theme-monokai";
 import TicTacToe from "./TicTacToe";
 import steps from "../utils/steps";
 
+import ReactGA from "react-ga";
 const App = () => {
+  const TRACKING_ID = "G-SV56VN3KMN"; // YOUR_OWN_TRACKING_ID
+  ReactGA.initialize(TRACKING_ID);
+
   const jsEditorRef = useRef(null);
   const cssEditorRef = useRef(null);
   const [currentStep, setCurrentStep] = useState(0);
