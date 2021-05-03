@@ -64,7 +64,6 @@ const App = () => {
           }
 
           if (step.showHeader !== undefined) {
-            console.log("SSHOWWW HEADDERERERER", step.showHeader);
             setShowHeader(step.showHeader);
           }
 
@@ -143,7 +142,6 @@ const App = () => {
     const interval = setInterval(() => {
       const char = step.intro.shift();
       tmpTextContent += char;
-      console.log("tmpTextContent", checkHTML(tmpTextContent));
       if (checkHTML(tmpTextContent)) {
         commentsHTMLRef.current.innerHTML = tmpTextContent;
       } else {
@@ -161,9 +159,7 @@ const App = () => {
 
   useEffect(() => {
     if (jsEditorRef.current && cssEditorRef.current) {
-      console.log("steps[currentStep]", steps[currentStep].intro);
       if (steps[currentStep].intro) {
-        console.log("writeIntro");
         writeIntro();
       } else {
         writeChar();
