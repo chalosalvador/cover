@@ -11,7 +11,7 @@ import steps from "../utils/steps";
 
 import ReactGA from "react-ga";
 const App = () => {
-  const TRACKING_ID = "G-SV56VN3KMN"; // YOUR_OWN_TRACKING_ID
+  const TRACKING_ID = "UA-196208142-1"; // YOUR_OWN_TRACKING_ID
   ReactGA.initialize(TRACKING_ID);
 
   const jsEditorRef = useRef(null);
