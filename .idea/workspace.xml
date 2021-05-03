@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47be7e6b-5059-4d22-a035-ee583aeb0c1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TicTacToe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TicTacToe.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,7 @@
       <workItem from="1618438501071" duration="4887000" />
       <workItem from="1619220466052" duration="46104000" />
       <workItem from="1619977151611" duration="23646000" />
-      <workItem from="1620058370328" duration="85000" />
+      <workItem from="1620058370328" duration="171000" />
     </task>
     <servers />
   </component>

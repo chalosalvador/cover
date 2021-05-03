@@ -61,11 +61,7 @@ const TicTacToe = ({
         {cells.map((_, i) => (
           <div
             key={i}
-            className={
-              applyItemStyle
-                ? cells[i] && `item-${cells[i]}`
-                : nullUA - 196208142 - 1
-            }
+            className={applyItemStyle ? cells[i] && `item-${cells[i]}` : null}
             onClick={allowHandleClick ? () => handleClick(i) : null}
           >
             {cells[i]}
