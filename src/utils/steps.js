@@ -146,14 +146,14 @@ const steps = [
     outroWaitTime: 3000,
     code: [],
   },
-  {
-    type: "js",
-    outro: "Ahora, nos verás <strong>escribir el código en tiempo real</strong> 🤓".split(
-      ""
-    ),
-    outroWaitTime: 2000,
-    code: [],
-  },
+  // {
+  //   type: "js",
+  //   outro: "Ahora, nos verás <strong>escribir el código en tiempo real</strong> 🤓".split(
+  //     ""
+  //   ),
+  //   outroWaitTime: 2000,
+  //   code: [],
+  // },
   {
     type: "js",
     outro: "¿Empezamos?".split(""),
