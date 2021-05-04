@@ -456,7 +456,7 @@ const steps = [
   },
   {
     type: "js",
-    outro: 'Si te gustó, imagina todo lo que podemos hacer por tí.<br>Contáctanos en <a href="https://grupomenta.com">grupomenta.com</a>, nos encantará conversar contigo 😉'.split(
+    outro: 'Si te gustó, imagina todo lo que podemos hacer por tí.<br>Contáctanos en <a href="mailto:info@grupomenta.com">info@grupomenta.com</a>, nos encantará conversar contigo 😉'.split(
       ""
     ),
     code: [],

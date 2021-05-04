@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47be7e6b-5059-4d22-a035-ee583aeb0c1a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/TicTacToe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TicTacToe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/steps.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/steps.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,16 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/public/index.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/TicTacToe.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/utils/steps.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/styles/index.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/styles/App.css" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/styles/TicTacToe.css" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1qMdbbhIaH3pLzrMfPlodogi7c9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -80,7 +91,8 @@
       <workItem from="1618438501071" duration="4887000" />
       <workItem from="1619220466052" duration="46104000" />
       <workItem from="1619977151611" duration="23646000" />
-      <workItem from="1620058370328" duration="171000" />
+      <workItem from="1620058370328" duration="474000" />
+      <workItem from="1620140391346" duration="438000" />
     </task>
     <servers />
   </component>
